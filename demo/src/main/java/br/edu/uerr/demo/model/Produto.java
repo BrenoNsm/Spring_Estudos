@@ -1,11 +1,30 @@
 package br.edu.uerr.demo.model;
 
-public class Produto {
+import java.io.Serializable;
+import java.util.Date;
+
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="produto")
+
+public class Produto implements Serializable{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
     private String descricao;
     private float preco;
     private Integer quantidade;
+    @Column(name="data_compra")
+    private Date dataCompra;
+    
     
     
     public Integer getId() {
@@ -37,6 +56,12 @@ public class Produto {
     }
     public void setQuantidade(Integer quantidade) {
         this.quantidade = quantidade;
+    }
+    public Date getDataCompra() {
+        return dataCompra;
+    }
+    public void setDataCompra(Date dataCompra) {
+        this.dataCompra = dataCompra;
     }
 
     
