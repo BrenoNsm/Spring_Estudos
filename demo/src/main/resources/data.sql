@@ -8,3 +8,9 @@ INSERT INTO PESSOA (id, nome, cep, logradouro, numero_casa, bairro, cidade, uf, 
 VALUES (4, 'Ana Costa', '98765-432', 'Avenida D', 234, 'Praia', 'Fortaleza', 'CE', '(85) 4321-8765', 'ana.costa@email.com');
 INSERT INTO PESSOA (id, nome, cep, logradouro, numero_casa, bairro, cidade, uf, telefone, email) 
 VALUES (5, 'Pedro Pereira', '34567-890', 'Rua E', 567, 'Lagoa', 'Porto Alegre', 'RS', '(51) 6789-0123', 'pedro.pereira@email.com');
+
+INSERT table produto
+(id, nome, descricao, preco, quantidade, data_compra) 
+values
+(1, 'arroz', 'pacote de arroz', '4.56', '100', '2023-10-04'),
+(1, 'Feijao', 'pacote de Feijao', '5.10', '200', '2023-10-06');
